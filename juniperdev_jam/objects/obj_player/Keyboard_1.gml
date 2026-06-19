@@ -3,11 +3,20 @@ if(keyboard_check(ord("A")) && abs(xVel)<=spd) {
 } else if(keyboard_check(ord("D")) && abs(xVel)<=spd) { 
 	xVel = spd;
 }
-if(keyboard_check(ord("F"))) {
-	hooked = true;
-	dx = (x-obj_hook.x)
-	dy = (y-obj_hook.y)
+
+if(keyboard_check_pressed(ord("F"))) {
+	dx = (x+sprite_width/2-(obj_hook.x+obj_hook.sprite_width/2))
+	dy = (y+sprite_height/2-(obj_hook.y+obj_hook.sprite_height/2))
+	hookAngle = arctan((dx/dy));
 	distance = sqrt(sqr(dx)+sqr(dy));
-	hookAngle = arctan(dx/dy);
-	show_debug_message(radtodeg(hookAngle));
+	release_modifier = distance/5000+0.03;
+}
+
+if(keyboard_check(ord("F"))) {
+	if(distance <=200) {
+	hooked = true;
+	hookAngle-=0.15;
+	x=obj_hook.x+obj_hook.sprite_width/2+sign(dx)*distance*cos(hookAngle)-sprite_width/2
+	y=obj_hook.y+obj_hook.sprite_height/2-distance*sin(hookAngle)-sprite_height/2
+	}
 }

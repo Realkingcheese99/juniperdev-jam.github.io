@@ -12,3 +12,5 @@ airjumps = 1;
 grounded = false;
 ceiling = false;
 hooked = false;
+release_modifier = 1/20;
+distance = 0;

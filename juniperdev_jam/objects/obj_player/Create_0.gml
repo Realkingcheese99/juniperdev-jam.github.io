@@ -11,3 +11,4 @@ upvel = 0;
 airjumps = 1;
 grounded = false;
 ceiling = false;
+hooked = false;

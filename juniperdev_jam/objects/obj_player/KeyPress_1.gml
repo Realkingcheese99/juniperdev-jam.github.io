@@ -5,3 +5,4 @@ if(((grounded == true) || (airjumps > 0)) && (keyboard_check(vk_space) || keyboa
 	}
 	grounded = false;
 }
+

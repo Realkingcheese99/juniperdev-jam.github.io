@@ -50,4 +50,5 @@ if(y>room_height) {
 	x = 736
 }
 
-show_debug_message(airjumps);
+//show_debug_message(airjumps);
+//show_debug_message(airtime);

@@ -1,0 +1,11 @@
+spd = 4;
+initial_jump_vel = 6;
+airtime = 1;
+xVel = 0;
+yVel = 0;
+floatiness = 6;
+heaviness = 5;
+friction = 0.5
+grav = 0;
+upvel = 0;
+jump = false;

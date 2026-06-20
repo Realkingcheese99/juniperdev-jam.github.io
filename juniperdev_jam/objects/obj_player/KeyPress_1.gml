@@ -6,3 +6,7 @@ if(((grounded == true) || (airjumps > 0)) && (keyboard_check(vk_space) || keyboa
 	grounded = false;
 }
 
+
+if(keyboard_check(vk_down)) {
+	airtime = 2;
+}

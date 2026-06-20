@@ -19,10 +19,13 @@
   },
   "name":"juniperdev_jam",
   "resources":[
+    {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},},
     {"id":{"name":"obj_hook","path":"objects/obj_hook/obj_hook.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_tile","path":"objects/obj_tile/obj_tile.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"horizontal","path":"rooms/horizontal/horizontal.yy",},},
+    {"id":{"name":"vertical","path":"rooms/vertical/vertical.yy",},},
+    {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},},
     {"id":{"name":"spr_hook","path":"sprites/spr_hook/spr_hook.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_tile","path":"sprites/spr_tile/spr_tile.yy",},},
@@ -30,7 +33,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"horizontal","path":"rooms/horizontal/horizontal.yy",},},
+    {"roomId":{"name":"vertical","path":"rooms/vertical/vertical.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

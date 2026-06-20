@@ -14,3 +14,4 @@ ceiling = false;
 hooked = false;
 release_modifier = 1/20;
 distance = 0;
+nearest_hook = 0;

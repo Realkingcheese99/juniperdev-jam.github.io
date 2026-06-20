@@ -5,6 +5,7 @@ if(keyboard_check(ord("A")) && abs(xVel)<=spd) {
 }
 
 if(keyboard_check_pressed(ord("F"))) {
+	nearest_hook = instance_nearest(x+sprite_width/2,y+sprite_width/2,obj_hook);
 	dx = (x+sprite_width/2-(obj_hook.x+obj_hook.sprite_width/2))
 	dy = (y+sprite_height/2-(obj_hook.y+obj_hook.sprite_height/2))
 	hookAngle = arctan((dx/dy));

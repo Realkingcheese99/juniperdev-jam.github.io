@@ -14,8 +14,8 @@
   "name":"obj_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"juniperdev_jam",
-    "path":"juniperdev_jam.yyp",
+    "name":"obj",
+    "path":"folders/player/obj.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player",
-    "path":"sprites/spr_player/spr_player.yy",
+    "name":"spr_player_old",
+    "path":"sprites/spr_player_old/spr_player_old.yy",
   },
   "spriteMaskId":null,
   "visible":true,

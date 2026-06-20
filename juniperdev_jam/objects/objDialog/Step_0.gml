@@ -2,7 +2,7 @@
 
 if (page < 0) exit;
 
-dialogPage = dialog[page].msg;
+dialogPage = dialog[page];
 
 if (textPause > 0)
 {

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"juniperdev_jam",
-    "path":"juniperdev_jam.yyp",
+    "name":"spr",
+    "path":"folders/environment/spr.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

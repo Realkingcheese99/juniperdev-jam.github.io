@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tile",
-  "eventList":[],
+  "%Name":"obj_roomtransition",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_tile",
+  "name":"obj_roomtransition",
   "overriddenProperties":[],
   "parent":{
     "name":"obj",
-    "path":"folders/environment/obj.yy",
+    "path":"folders/triggers/obj.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_tile",
-    "path":"sprites/spr_tile/spr_tile.yy",
+    "name":"spr_roomtransition",
+    "path":"sprites/spr_roomtransition/spr_roomtransition.yy",
   },
   "spriteMaskId":null,
   "visible":true,

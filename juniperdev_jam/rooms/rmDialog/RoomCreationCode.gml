@@ -10,5 +10,5 @@ createDialog
 {
 	msg: "The quick brown fox jumps over the lazy dog!"
 }
-]
+], 0, 3
 )

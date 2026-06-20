@@ -37,8 +37,8 @@
   ],
   "name":"horizontal",
   "parent":{
-    "name":"juniperdev_jam",
-    "path":"juniperdev_jam.yyp",
+    "name":"test",
+    "path":"folders/rooms/test.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -6,8 +6,8 @@
   "name":"obj_hook",
   "overriddenProperties":[],
   "parent":{
-    "name":"juniperdev_jam",
-    "path":"juniperdev_jam.yyp",
+    "name":"obj",
+    "path":"folders/environment/obj.yy",
   },
   "parentObjectId":null,
   "persistent":false,

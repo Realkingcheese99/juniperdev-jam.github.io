@@ -1,7 +1,7 @@
-spd = 4;
+spd = 5;
 initial_jump_vel = 6;
-airtime = 1;
-xVel = 0;
+airtime = global.airtime;
+xVel = global.xVel;
 yVel = 0;
 floatiness = 6;
 heaviness = 5;
@@ -20,3 +20,13 @@ pass1 = false;
 pass2 = false;
 collision = false;
 hooktime = 0;
+/*
+if(global.start == true) {
+
+}
+*/
+y = global.playerY;
+x = global.playerX;
+
+jumptime = 0;
+jumping = false;

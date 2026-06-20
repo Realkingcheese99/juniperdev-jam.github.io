@@ -1,0 +1,1 @@
+//createDialog(global.dialogue,0,2);

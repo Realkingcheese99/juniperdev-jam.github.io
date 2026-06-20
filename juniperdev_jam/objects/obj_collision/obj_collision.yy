@@ -8,8 +8,8 @@
   "name":"obj_collision",
   "overriddenProperties":[],
   "parent":{
-    "name":"juniperdev_jam",
-    "path":"juniperdev_jam.yyp",
+    "name":"obj",
+    "path":"folders/player/obj.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -34,5 +34,5 @@
     "path":"sprites/spr_collision/spr_collision.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

@@ -9,13 +9,15 @@
     "name":"Default",
   },
   "defaultScriptType":1,
-  "Folders":[],
+  "Folders":[
+    {"$GMFolder":"","%Name":"Dialogue system","folderPath":"folders/Dialogue system.yy","name":"Dialogue system","resourceType":"GMFolder","resourceVersion":"2.0",},
+  ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"juniperdev_jam",
   "resources":[
@@ -23,8 +25,11 @@
     {"id":{"name":"obj_hook","path":"objects/obj_hook/obj_hook.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_tile","path":"objects/obj_tile/obj_tile.yy",},},
+    {"id":{"name":"objDialog","path":"objects/objDialog/objDialog.yy",},},
     {"id":{"name":"horizontal","path":"rooms/horizontal/horizontal.yy",},},
+    {"id":{"name":"rmDialog","path":"rooms/rmDialog/rmDialog.yy",},},
     {"id":{"name":"vertical","path":"rooms/vertical/vertical.yy",},},
+    {"id":{"name":"scrDialog","path":"scripts/scrDialog/scrDialog.yy",},},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},},
     {"id":{"name":"spr_hook","path":"sprites/spr_hook/spr_hook.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
@@ -33,8 +38,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"vertical","path":"rooms/vertical/vertical.yy",},},
+    {"roomId":{"name":"rmDialog","path":"rooms/rmDialog/rmDialog.yy",},},
     {"roomId":{"name":"horizontal","path":"rooms/horizontal/horizontal.yy",},},
+    {"roomId":{"name":"vertical","path":"rooms/vertical/vertical.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

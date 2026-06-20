@@ -19,7 +19,6 @@ if(keyboard_check(ord("A"))) {
 if(keyboard_check_pressed(ord("F"))) {
 	hooktime = 0;
 	collision = false;
-	show_debug_message(x);
 	nearest_hook = instance_nearest(x+sprite_width/2,y+sprite_width/2,obj_hook);
 	dx = (x+sprite_width/2-(nearest_hook.x+nearest_hook.sprite_width/2))
 	dy = (y+sprite_height/2-(nearest_hook.y+nearest_hook.sprite_height/2))

@@ -25,10 +25,12 @@ if((!place_meeting(x,y+1,obj_tile) && ceiling == false) || grounded == false) {
 	}
 }
 //horizontal
-if(!place_meeting(x+1,y-1,obj_tile)) {
-	x+=xVel/4;
+for(i = 0; i<abs(xVel); i++) {
+if(!place_meeting(x+sign(xVel),y-1,obj_tile)) {
+	x+=sign(xVel)/4;
 } else {
 	hooked = false;
+}
 }
 //landing
 if(!place_meeting(x,y+1,obj_tile)) {

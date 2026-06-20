@@ -10,5 +10,5 @@ createDialog
 {
 	msg: "Please restart your game"
 }
-]
+], 0, 3
 )

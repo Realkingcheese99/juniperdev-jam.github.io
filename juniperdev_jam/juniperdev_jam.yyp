@@ -33,8 +33,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"horizontal","path":"rooms/horizontal/horizontal.yy",},},
     {"roomId":{"name":"vertical","path":"rooms/vertical/vertical.yy",},},
+    {"roomId":{"name":"horizontal","path":"rooms/horizontal/horizontal.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

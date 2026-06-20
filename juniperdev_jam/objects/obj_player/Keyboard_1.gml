@@ -24,8 +24,8 @@ if(keyboard_check_pressed(ord("F"))) {
 	dx = (x+sprite_width/2-(nearest_hook.x+nearest_hook.sprite_width/2))
 	dy = (y+sprite_height/2-(nearest_hook.y+nearest_hook.sprite_height/2))
 	distance = sqrt(sqr(dx)+sqr(dy));
-	if(distance < 50) {
-		distance = 50;
+	if(distance < 50/4) {
+		distance = 50/4;
 	}
 	hookAngle = arccos((dy/distance));
 	release_modifier = distance/5000+0.03;
@@ -33,7 +33,7 @@ if(keyboard_check_pressed(ord("F"))) {
 }
 
 if(keyboard_check(ord("F"))) {
-	if(distance <=200) {
+	if(distance <=200/4) {
 		
 if(collision == false) {
 	hooked = true;

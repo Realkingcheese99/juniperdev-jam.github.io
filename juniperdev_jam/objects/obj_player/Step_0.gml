@@ -12,26 +12,26 @@ yVel = (grav-upvel);
 //hitting head
 if(place_meeting(x,y-4,obj_tile)) {
 	ceiling = true;
-	y+=4;
+	y+=1;
 	airtime = 1;
 	collision = true;
 } else {
 	ceiling = false;
 }
 //jumping
-if((!place_meeting(x,y+4,obj_tile) && ceiling == false) || grounded == false) {
+if((!place_meeting(x,y+1,obj_tile) && ceiling == false) || grounded == false) {
 	if(hooked == false) {
-	y+=yVel;
+	y+=yVel/4;
 	}
 }
 //horizontal
 if(!place_meeting(x+xVel,y-1,obj_tile)) {
-	x+=xVel;
+	x+=xVel/4;
 } else {
 	hooked = false;
 }
 //landing
-if(!place_meeting(x,y+4,obj_tile)) {
+if(!place_meeting(x,y+1,obj_tile)) {
 	grounded = false;
 	airtime += 0.03
 	xVel *= (1-air_resistance);

@@ -30,6 +30,8 @@ if(!place_meeting(x+sign(xVel),y-1,obj_tile)) {
 	x+=sign(xVel)/4;
 } else {
 	hooked = false;
+	image_index = 1;
+	image_speed = 0;
 }
 }
 //landing

@@ -30,3 +30,6 @@ x = global.playerX;
 
 jumptime = 0;
 jumping = false;
+onWall = false;
+dir = 0;
+walljump = false;

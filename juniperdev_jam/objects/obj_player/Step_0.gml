@@ -104,6 +104,9 @@ if(hooked == true) {
 if(xVel!=0) {
 image_xscale = sign(xVel);
 }
+
+
+//show_debug_message(onWall);
 //show_debug_message(1/abs(airtime));
 //show_debug_message(airtime);
 //show_debug_message($"xvel: {xVel}, yvel: {yVel}");

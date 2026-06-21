@@ -1,20 +1,40 @@
+
 if(keyboard_check(ord("A"))) {
+	dir = 1;
+		if(place_meeting(x-1,y-1,obj_tile)) {
+		onWall = true
+		airtime = 0.8
+	} else {
+		onWall = false;
+	}
 	if(abs(xVel)<=spd) {
 	xVel = -spd;
 	} else if(grounded == false) {
 		if(sign(xVel == 1)) {
 			xVel -= 2*spd*air_resistance
 	}
+
 	}
 } else if(keyboard_check(ord("D"))) { 
+	dir = 2;
+	show_debug_message("right");
+	if(place_meeting(x+1,y-1,obj_tile)) {
+		onWall = true
+		airtime = 0.8
+		show_debug_message("ON WALL");
+	} else {
+		onWall = false;
+	}
 	if(abs(xVel)<=spd) {
 	xVel = spd;
 	} else if(grounded == false) {
 		if(sign(xVel == -1)) {
 			xVel += 2*spd*air_resistance
 	}
+	
+		
 	}
-}
+	}
 	if(instance_exists(obj_hook)){
 if(keyboard_check_pressed(ord("F"))) {
 
@@ -54,4 +74,15 @@ if(hooked == true) {
 if((jumping == true) && (jumptime < 10) && (keyboard_check(vk_space) || keyboard_check(ord("W")))) {
 	jumptime++;
 	airtime = -0.01
+	if(walljump == true) {
+		airtime = -0.02;
+		if(dir == 1) {
+			xVel = spd;
+		} else if(dir == 2) {
+			xVel = -spd;
+		}
+	}
+}
+if(jumptime >= 10) {
+	dir = abs(dir-1) + 1;
 }

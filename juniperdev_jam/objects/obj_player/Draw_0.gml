@@ -1,3 +1,4 @@
+/// @desc hook drawing
 draw_self();
 if(hooked == true) {
 	if(collision == false) {

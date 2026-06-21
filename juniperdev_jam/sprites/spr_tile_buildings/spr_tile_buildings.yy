@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"spr",
-    "path":"folders/environment/tilesets/spr.yy",
+    "name":"tilespr",
+    "path":"folders/environment/tilesets/tilespr.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

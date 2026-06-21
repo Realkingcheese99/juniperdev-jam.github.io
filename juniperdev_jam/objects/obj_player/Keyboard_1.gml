@@ -37,7 +37,6 @@ if(keyboard_check(ord("A"))) {
 	}
 	if(instance_exists(obj_hook)){
 if(keyboard_check_pressed(ord("F"))) {
-
 	hooktime = 0;
 	collision = false;
 	nearest_hook = instance_nearest(x,y,obj_hook);
@@ -50,6 +49,7 @@ if(keyboard_check_pressed(ord("F"))) {
 	hookAngle = arccos((dy/distance));
 	release_modifier = distance/5000+0.03;
 	//show_debug_message(string_concat(y, "; ", nearest_hook.y+nearest_hook.sprite_height/2-distance*sin(hookAngle)-sprite_height/2))
+
 }
 
 if(keyboard_check(ord("F"))) {
@@ -57,6 +57,7 @@ if(keyboard_check(ord("F"))) {
 		
 if(collision == false) {
 	hooked = true;
+
 if(hooked == true) {
 
 	x=nearest_hook.x+nearest_hook.sprite_width/2+sign(dx)*distance*sin(hookAngle)

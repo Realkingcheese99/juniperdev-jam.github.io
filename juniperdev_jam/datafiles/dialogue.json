@@ -1,3 +1,7 @@
 [
-    "ERROR READING DIALOGUE"
+    "ERROR READING DIALOGUE",
+    "$1The dialogue system can support portrait sprites now!",
+    "$2adding them in the dialogue is as simple as adding a dollar sign and then the sprite number!",
+    "Just make sure that the sprite is named 'spr_portrait{X}', where {X} is any number from 0-9.",
+    "$1Oh, and don't forget, portrait sprites are 48x48 pixels!"
 ]

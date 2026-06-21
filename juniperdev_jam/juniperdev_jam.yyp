@@ -11,6 +11,7 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"Dialogue system","folderPath":"folders/Dialogue system.yy","name":"Dialogue system","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"talksprites","folderPath":"folders/Dialogue system/talksprites.yy","name":"talksprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"environment","folderPath":"folders/environment.yy","name":"environment","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"obj","folderPath":"folders/environment/obj.yy","name":"obj","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"spr","folderPath":"folders/environment/spr.yy","name":"spr","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -66,6 +67,8 @@
     {"id":{"name":"spr_hook","path":"sprites/spr_hook/spr_hook.yy",},},
     {"id":{"name":"spr_player_old","path":"sprites/spr_player_old/spr_player_old.yy",},},
     {"id":{"name":"spr_player_prototype","path":"sprites/spr_player_prototype/spr_player_prototype.yy",},},
+    {"id":{"name":"spr_portrait1","path":"sprites/spr_portrait1/spr_portrait1.yy",},},
+    {"id":{"name":"spr_portrait2","path":"sprites/spr_portrait2/spr_portrait2.yy",},},
     {"id":{"name":"spr_roomtransition","path":"sprites/spr_roomtransition/spr_roomtransition.yy",},},
     {"id":{"name":"spr_tile_buildings","path":"sprites/spr_tile_buildings/spr_tile_buildings.yy",},},
     {"id":{"name":"spr_tile_details","path":"sprites/spr_tile_details/spr_tile_details.yy",},},

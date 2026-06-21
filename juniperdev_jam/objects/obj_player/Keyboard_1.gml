@@ -15,13 +15,14 @@ if(keyboard_check(ord("A"))) {
 	}
 	}
 }
-
+	if(instance_exists(obj_hook)){
 if(keyboard_check_pressed(ord("F"))) {
+
 	hooktime = 0;
 	collision = false;
-	nearest_hook = instance_nearest(x+sprite_width/2,y+sprite_width/2,obj_hook);
-	dx = (x+sprite_width/2-(nearest_hook.x+nearest_hook.sprite_width/2))
-	dy = (y+sprite_height/2-(nearest_hook.y+nearest_hook.sprite_height/2))
+	nearest_hook = instance_nearest(x,y,obj_hook);
+	dx = (x-(nearest_hook.x+nearest_hook.sprite_width/2))
+	dy = (y-(nearest_hook.y+nearest_hook.sprite_height/2))
 	distance = sqrt(sqr(dx)+sqr(dy));
 	if(distance < 50/4) {
 		distance = 50/4;
@@ -38,8 +39,8 @@ if(collision == false) {
 	hooked = true;
 if(hooked == true) {
 
-	x=nearest_hook.x+nearest_hook.sprite_width/2+sign(dx)*distance*sin(hookAngle)-sprite_width/2
-	y=nearest_hook.y+nearest_hook.sprite_height/2+distance*cos(hookAngle)-sprite_height/2;
+	x=nearest_hook.x+nearest_hook.sprite_width/2+sign(dx)*distance*sin(hookAngle)
+	y=nearest_hook.y+nearest_hook.sprite_height/2+distance*cos(hookAngle)
 	show_debug_message(y);
 		hookAngle-=0.15;
 		hooktime += 0.03
@@ -47,6 +48,7 @@ if(hooked == true) {
 	}
 }
 }
+	}
 
 
 if((jumping == true) && (jumptime < 10) && (keyboard_check(vk_space) || keyboard_check(ord("W")))) {

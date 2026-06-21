@@ -1,11 +1,11 @@
 {
   "$GMSprite":"v2",
   "%Name":"sprPlayerWalk",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":29,
-  "bbox_left":3,
-  "bbox_right":21,
-  "bbox_top":3,
+  "bbox_left":11,
+  "bbox_right":17,
+  "bbox_top":14,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -20,6 +20,7 @@
   "height":32,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"f27f0dbd-74ed-45b3-905c-38e826001312","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"f27f0dbd-74ed-45b3-905c-38e826001312","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
     {"$GMImageLayer":"","%Name":"3d99c813-d435-41e5-ab40-0b3d418c728d","blendMode":0,"displayName":"default","isLocked":false,"name":"3d99c813-d435-41e5-ab40-0b3d418c728d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sprPlayerWalk",

@@ -1,6 +1,7 @@
 if(!place_meeting(x,y,obj_player)) {
 	touching = false;
 } else if(touching == false) {
+	show_debug_message(room);
 	global.playerY = obj_player.y;
 	global.airtime = obj_player.airtime;
 	global.xVel = obj_player.xVel;
@@ -8,7 +9,7 @@ if(!place_meeting(x,y,obj_player)) {
 	global.playerX = 5;
 	room_goto_next();
 	} else {
-		global.playerX = room_width-obj_player.sprite_width-5;
+		global.playerX = room_width
 		room_goto_previous();
 	}
 }

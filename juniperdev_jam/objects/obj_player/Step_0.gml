@@ -3,7 +3,11 @@
 //y velocity calculations
 grav = heaviness*airtime;
 upvel = floatiness*(1-airtime);
+if(airtime!=1){
 yVel = (grav-upvel);
+} else {
+	yVel = 0;
+}
 
 
 
@@ -19,7 +23,7 @@ if(place_meeting(x,y-1,obj_tile)) {
 	ceiling = false;
 }
 //jumping
-if((!place_meeting(x,y+1,obj_tile) && ceiling == false) || grounded == false) {
+if((place_meeting(x,y+2,obj_tile) && ceiling == false) || grounded == false) {
 	if(hooked == false) {
 	y+=yVel/4;
 	}
@@ -27,7 +31,7 @@ if((!place_meeting(x,y+1,obj_tile) && ceiling == false) || grounded == false) {
 //horizontal
 for(i = 0; i<abs(xVel); i++) {
 if(!place_meeting(x+sign(xVel),y-1,obj_tile)) {
-	x+=sign(xVel)/4;
+	x+=(xVel/16);
 } else {
 	hooked = false;
 	image_index = 1;
@@ -35,7 +39,7 @@ if(!place_meeting(x+sign(xVel),y-1,obj_tile)) {
 }
 }
 //landing
-if(!place_meeting(x,y+1,obj_tile)) {
+if(!place_meeting(x,y+2,obj_tile)) {
 	grounded = false;
 	airtime += 0.03
 	xVel *= (1-air_resistance);
@@ -63,15 +67,15 @@ if(place_meeting(x,y,obj_tile)) {
 
 //vertical collision boxes
 instance_destroy(obj_collision);
-instance_create_depth(x,y,0,obj_collision, {
+instance_create_depth(x-3-(2*sign(xVel)),y-sprite_height/4-2,0,obj_collision, {
 	type: 0,
-	height: sprite_height/2,
-	width: sprite_width
+	height: sprite_height/4,
+	width: 9
 })
-instance_create_depth(x,y+sprite_height/2,0,obj_collision, {
+instance_create_depth(x-3-(2*sign(xVel)),y-2,0,obj_collision, {
 	type: 1,
 	height: sprite_height/2,
-	width: sprite_width
+	width: 9
 })
 
 
@@ -82,3 +86,24 @@ if(collision == true) {
 hooktime = clamp(hooktime,0,1)
 //show_debug_message(airjumps);
 //show_debug_message(airtime);
+//anim switching
+if(hooked == true) {
+	sprite_index = sprPlayerHook;
+} else if(abs(airtime) > 1.001|| abs(airtime)<0.999) {
+	sprite_index = sprPlayerJump;
+
+	image_speed = 0;
+} else if(abs(xVel>0.1)) {
+	sprite_index = sprPlayerWalk
+	image_speed = 1;
+} else if(abs(xVel) <= 0.1) {
+	//idle anim
+	sprite_index = sprPlayerWalk
+	image_speed = 0;
+}
+if(xVel!=0) {
+image_xscale = sign(xVel);
+}
+//show_debug_message(1/abs(airtime));
+//show_debug_message(airtime);
+//show_debug_message($"xvel: {xVel}, yvel: {yVel}");

@@ -1,11 +1,11 @@
 {
   "$GMSprite":"v2",
   "%Name":"sprPlayerJump",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":29,
-  "bbox_left":3,
-  "bbox_right":22,
-  "bbox_top":1,
+  "bbox_left":11,
+  "bbox_right":17,
+  "bbox_top":12,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -19,6 +19,7 @@
   "height":32,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"0d0af797-cfcb-46de-850e-749c7a7a9912","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"0d0af797-cfcb-46de-850e-749c7a7a9912","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
     {"$GMImageLayer":"","%Name":"c2269372-e445-46ec-b843-36fb78301713","blendMode":0,"displayName":"default","isLocked":false,"name":"c2269372-e445-46ec-b843-36fb78301713","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sprPlayerJump",

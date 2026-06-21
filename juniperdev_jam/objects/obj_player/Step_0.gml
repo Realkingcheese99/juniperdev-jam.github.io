@@ -88,7 +88,62 @@ hooktime = clamp(hooktime,0,1)
 //show_debug_message(airtime);
 //anim switching
 if(hooked == true) {
-	sprite_index = sprPlayerHook;
+	// Figuring out distance to hook point without messing up spinning
+	
+	angle_calc_hookpoint = instance_nearest(x,y,obj_hook);
+
+	angle_calc_dx = (x-(angle_calc_hookpoint.x+angle_calc_hookpoint.sprite_width/2))
+	angle_calc_dy = (y-(angle_calc_hookpoint.y+angle_calc_hookpoint.sprite_height/2))
+	
+	// Finding angles based on quandrants
+	
+	if (angle_calc_dy >= 0){
+		deg_to_hook = 90 - radtodeg(arctan(angle_calc_dx / angle_calc_dy))
+	}
+	else if (angle_calc_dx < 0){
+		deg_to_hook = 270 - radtodeg(arctan(angle_calc_dx / angle_calc_dy))
+	}
+	
+	if ((deg_to_hook >= 0 && deg_to_hook < 22) || (deg_to_hook <= 360 && deg_to_hook > 338)){
+		show_debug_message("point left")
+		sprite_index = spr_point_left;
+	}
+	else if (deg_to_hook >= 23 && deg_to_hook < 67){
+		show_debug_message("point up left")
+		sprite_index = spr_point_left;
+	}
+	else if (deg_to_hook >= 68 && deg_to_hook < 122){
+		show_debug_message("point up")
+		sprite_index = spr_point_left;
+
+	}
+	else if (deg_to_hook >= 113 && deg_to_hook < 157){
+		show_debug_message("point up right")
+		sprite_index = spr_point_left;
+
+	}
+	else if (deg_to_hook >= 158 && deg_to_hook < 202){
+		show_debug_message("point right")
+		sprite_index = spr_point_left;
+
+	}
+	else if (deg_to_hook >= 203 && deg_to_hook < 247){
+		show_debug_message("point down right")
+		sprite_index = spr_point_left;
+
+	}
+	else if (deg_to_hook >= 248 && deg_to_hook < 292){
+		show_debug_message("point down")
+		sprite_index = spr_point_left;
+
+	}
+	else if (deg_to_hook >= 293 && deg_to_hook < 337){
+		show_debug_message("point down left")
+		sprite_index = spr_point_left;
+
+	}
+	
+
 } else if(abs(airtime) > 1.001|| abs(airtime)<0.999) {
 	sprite_index = sprPlayerJump;
 
@@ -104,6 +159,7 @@ if(hooked == true) {
 if(xVel!=0) {
 image_xscale = sign(xVel);
 }
+
 
 
 //show_debug_message(onWall);

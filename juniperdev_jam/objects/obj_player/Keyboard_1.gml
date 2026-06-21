@@ -71,7 +71,7 @@ if(hooked == true) {
 	}
 
 
-if((jumping == true) && (jumptime < 10) && (keyboard_check(vk_space) || keyboard_check(ord("W")))) {
+if((jumping == true) && (jumptime < 15) && (keyboard_check(vk_space) || keyboard_check(ord("W")))) {
 	jumptime++;
 	airtime = -0.01
 	if(walljump == true) {

@@ -95,7 +95,7 @@ if(hooked == true) {
 	angle_calc_dx = (x-(angle_calc_hookpoint.x+angle_calc_hookpoint.sprite_width/2))
 	angle_calc_dy = (y-(angle_calc_hookpoint.y+angle_calc_hookpoint.sprite_height/2))
 	
-	// Finding angles based on quandrants
+	// Find angle
 	
 	if (angle_calc_dy >= 0){
 		deg_to_hook = 90 - radtodeg(arctan(angle_calc_dx / angle_calc_dy))
@@ -104,42 +104,45 @@ if(hooked == true) {
 		deg_to_hook = 270 - radtodeg(arctan(angle_calc_dx / angle_calc_dy))
 	}
 	
+	// Change sprite based on angle
+	
 	if ((deg_to_hook >= 0 && deg_to_hook < 22) || (deg_to_hook <= 360 && deg_to_hook > 338)){
-		show_debug_message("point left")
+		
+		show_debug_message($"point left, deg: {deg_to_hook}")
 		sprite_index = spr_point_left;
 	}
 	else if (deg_to_hook >= 23 && deg_to_hook < 67){
-		show_debug_message("point up left")
-		sprite_index = spr_point_left;
+		show_debug_message($"point up left, deg: {deg_to_hook}")
+		sprite_index = spr_point_up_left;
 	}
 	else if (deg_to_hook >= 68 && deg_to_hook < 122){
-		show_debug_message("point up")
-		sprite_index = spr_point_left;
+		show_debug_message($"point up, deg: {deg_to_hook}")
+		sprite_index = spr_point_up;
 
 	}
 	else if (deg_to_hook >= 113 && deg_to_hook < 157){
-		show_debug_message("point up right")
-		sprite_index = spr_point_left;
+		show_debug_message($"point up right, deg: {deg_to_hook}")
+		sprite_index = spr_point_up_right;
 
 	}
 	else if (deg_to_hook >= 158 && deg_to_hook < 202){
-		show_debug_message("point right")
-		sprite_index = spr_point_left;
+		show_debug_message($"point right, deg: {deg_to_hook}")
+		sprite_index = spr_point_right;
 
 	}
 	else if (deg_to_hook >= 203 && deg_to_hook < 247){
-		show_debug_message("point down right")
-		sprite_index = spr_point_left;
+		show_debug_message($"point down right, deg: {deg_to_hook}")
+		sprite_index = spr_point_down_right;
 
 	}
 	else if (deg_to_hook >= 248 && deg_to_hook < 292){
-		show_debug_message("point down")
-		sprite_index = spr_point_left;
+		show_debug_message($"point down, deg: {deg_to_hook}")
+		sprite_index = spr_point_down;
 
 	}
 	else if (deg_to_hook >= 293 && deg_to_hook < 337){
-		show_debug_message("point down left")
-		sprite_index = spr_point_left;
+		show_debug_message($"point down left, deg: {deg_to_hook}")
+		sprite_index = spr_point_down_left;
 
 	}
 	

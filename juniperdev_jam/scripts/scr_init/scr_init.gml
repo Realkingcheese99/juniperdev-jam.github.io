@@ -16,3 +16,4 @@ buffer_delete(buffer);
 
 global.dialogue = json_parse(jsonDialogue);
 }
+global.interact = 0;

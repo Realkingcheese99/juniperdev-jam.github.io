@@ -1,3 +1,4 @@
+if(global.interact ==0){
 if(((grounded == true) || (airjumps > 0) || (onWall == true)) && (keyboard_check(vk_space) || keyboard_check(ord("W")))) {
 	jumping = true;
 	jumptime = 0;
@@ -22,4 +23,5 @@ if(onWall == true) {
 
 if(keyboard_check(vk_down)) {
 	airtime = 2;
+}
 }

@@ -17,11 +17,9 @@ if(keyboard_check(ord("A"))) {
 	}
 } else if(keyboard_check(ord("D"))) { 
 	dir = 2;
-	show_debug_message("right");
 	if(place_meeting(x+1,y-1,obj_tile)) {
 		onWall = true
 		airtime = 0.8
-		show_debug_message("ON WALL");
 	} else {
 		onWall = false;
 	}

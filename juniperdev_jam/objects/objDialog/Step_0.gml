@@ -34,7 +34,7 @@ else if (currentChar < string_length(dialogPage))
 		}
 	}
 	
-		
+		show_debug_message($"char: {currentChar}");
 
 		//----------Keystrings----------//
 	
@@ -76,6 +76,22 @@ else if (currentChar < string_length(dialogPage))
 					currentChar++;
 				}
 			}
+			
+
+			//talk sprites
+			else if (_keystring == "$" && _typeSpd == typeSpd)
+			{
+			//	show_debug_message($"char: {currentChar}");
+				if(currentChar <1) {
+				currentChar += 2;
+				} else {
+					currentChar++;
+				}
+				var _portrait = string_char_at(dialogPage, currentChar);
+				portraitString = $"spr_portrait{_portrait}"
+				show_debug_message(portraitString);
+				currentChar++
+			}
 	
 		
 //-------Set points where the dialogue wraps-------//
@@ -94,6 +110,14 @@ else if (currentChar < string_length(dialogPage))
 
         _line += _words[w];
 
+		
+		//sets the length of what's considered "too long"
+		if(portraitString == "0") {
+			lineBreak = boxW-15;
+		} else {
+			lineBreak = boxW-15-4.266*48
+		}
+		
 		//if currentline is to long cut to the next line
         if (string_width(_line) > lineBreak)
         {
@@ -125,6 +149,12 @@ else if (currentChar < string_length(dialogPage))
 	{
 		drawnText = string_replace_all(drawnText,"^" + string(i), "");
 	}
+	
+	//clear $(value)
+	for (var i = 1; i < 10; i++)
+	{
+		drawnText = string_replace_all(drawnText,"$" + string(i), "");
+	}
 }
 
 else if (keyboard_check_pressed(ord("Z")) or autoPage == true)
@@ -132,6 +162,7 @@ else if (keyboard_check_pressed(ord("Z")) or autoPage == true)
 		 //Advanse dialogue
 		 page++;
 		 autoPage = false;
+		 portraitString = "0";
 		
 		 //End dialogue if done
 		 if (page >= array_length(dialog))

@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_hook",
+  "%Name":"obj_dialogueInteract",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":9,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_hook",
+  "name":"obj_dialogueInteract",
   "overriddenProperties":[],
   "parent":{
     "name":"obj",
-    "path":"folders/environment/obj.yy",
+    "path":"folders/triggers/obj.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprHook",
-    "path":"sprites/sprHook/sprHook.yy",
+    "name":"spr_dialogueInteract",
+    "path":"sprites/spr_dialogueInteract/spr_dialogueInteract.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

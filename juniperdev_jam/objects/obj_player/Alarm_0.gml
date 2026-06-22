@@ -1,0 +1,2 @@
+walljump = false;
+onwall = false;

@@ -1,38 +1,30 @@
-if(global.interact == 0) {
-if(keyboard_check(ord("A"))) {
+if(global.interact == 0) { // if not in dialogue
+if(keyboard_check(ord("A"))) { //left
+	if(leftTime+acceleration <= 1) {
+	leftTime += acceleration;
+	}
+	if(walljump == false) {
+	dir = -1;
+	}
+	if(abs(xVel)<=spd) { //sets xvel to base speed if xvelocity is slower than base speed
+//	xVel = -spd;
+	}
+} else if(keyboard_check(ord("D"))) { //right
+	if(rightTime+acceleration <= 1) {
+	rightTime += acceleration;
+	}
+	if(walljump == false) {
 	dir = 1;
-		if(place_meeting(x-1,y-1,obj_tile)) {
-		onWall = true
-		airtime = 0.8
-	} else {
-		onWall = false;
 	}
 	if(abs(xVel)<=spd) {
-	xVel = -spd;
-	} else if(grounded == false) {
-		if(sign(xVel == 1)) {
-			xVel -= 2*spd*air_resistance
-	}
-
-	}
-} else if(keyboard_check(ord("D"))) { 
-	dir = 2;
-	if(place_meeting(x+1,y-1,obj_tile)) {
-		onWall = true
-		airtime = 0.8
-	} else {
-		onWall = false;
-	}
-	if(abs(xVel)<=spd) {
-	xVel = spd;
-	} else if(grounded == false) {
-		if(sign(xVel == -1)) {
-			xVel += 2*spd*air_resistance
-	}
+//	xVel = spd;
 	
 		
 	}
 	}
+	
+	
+	//hook and swinging
 	if(instance_exists(obj_hook)){
 if(keyboard_check_pressed(ord("F"))) {
 	hooktime = 0;
@@ -60,7 +52,7 @@ if(hooked == true) {
 
 	x=nearest_hook.x+nearest_hook.sprite_width/2+sign(dx)*distance*sin(hookAngle)
 	y=nearest_hook.y+nearest_hook.sprite_height/2+distance*cos(hookAngle)
-	show_debug_message(y);
+	//show_debug_message(y);
 		hookAngle-=swingSpd;
 		hooktime += 0.03
 	}
@@ -69,22 +61,27 @@ if(hooked == true) {
 }
 	}
 
+//-------jumping--------
 
 if((jumping == true) && (jumptime < 15 ) && (keyboard_check(vk_space) || keyboard_check(ord("W")))) {
 	jumptime++;
 	airtime = -0.01
 	if(walljump == true) {
 		airtime = -0.02;
-		if(dir == 1) {
-			xVel = spd;
-		} else if(dir == 2) {
-			xVel = -spd;
+		if(dir == -1) {
+			rightTime = 0.8;
+			leftTime = 0;
+			
+		} else {
+			leftTime = 0.8;
+			rightTime = 0;
 		}
+	alarm[0] = 5;
 	}
 }
-
+/*
 if(jumptime >= 10) {
-	dir = abs(dir-2) + 1;
+	dir *= -1;
 }
-
+*/
 }

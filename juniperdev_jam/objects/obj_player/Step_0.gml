@@ -29,9 +29,9 @@ if((place_meeting(x,y+2,obj_tile) && ceiling == false) || grounded == false) {
 	}
 }
 //horizontal
-for(i = 0; i<abs(xVel); i++) {
-if(!place_meeting(x+sign(xVel),y-1,obj_tile)) {
-	x+=(xVel/16);
+for(i = 0; i<abs(rVel-lVel); i++) {
+if(!place_meeting(x+2*sign(xVel+(rVel-lVel)),y-1,obj_tile)) {
+	x+=(((xVel)+(rVel-lVel))/16);
 } else {
 	hooked = false;
 	image_index = 1;
@@ -108,40 +108,40 @@ if(hooked == true) {
 	
 	if ((deg_to_hook >= 0 && deg_to_hook < 22) || (deg_to_hook <= 360 && deg_to_hook > 338)){
 		
-		show_debug_message($"point left, deg: {deg_to_hook}")
+		//show_debug_message($"point left, deg: {deg_to_hook}")
 		sprite_index = spr_point_left;
 	}
 	else if (deg_to_hook >= 23 && deg_to_hook < 67){
-		show_debug_message($"point up left, deg: {deg_to_hook}")
+	//	show_debug_message($"point up left, deg: {deg_to_hook}")
 		sprite_index = spr_point_up_left;
 	}
 	else if (deg_to_hook >= 68 && deg_to_hook < 122){
-		show_debug_message($"point up, deg: {deg_to_hook}")
+	//show_debug_message($"point up, deg: {deg_to_hook}")
 		sprite_index = spr_point_up;
 
 	}
 	else if (deg_to_hook >= 113 && deg_to_hook < 157){
-		show_debug_message($"point up right, deg: {deg_to_hook}")
+	//	show_debug_message($"point up right, deg: {deg_to_hook}")
 		sprite_index = spr_point_up_right;
 
 	}
 	else if (deg_to_hook >= 158 && deg_to_hook < 202){
-		show_debug_message($"point right, deg: {deg_to_hook}")
+	//	show_debug_message($"point right, deg: {deg_to_hook}")
 		sprite_index = spr_point_right;
 
 	}
 	else if (deg_to_hook >= 203 && deg_to_hook < 247){
-		show_debug_message($"point down right, deg: {deg_to_hook}")
+	//	show_debug_message($"point down right, deg: {deg_to_hook}")
 		sprite_index = spr_point_down_right;
 
 	}
 	else if (deg_to_hook >= 248 && deg_to_hook < 292){
-		show_debug_message($"point down, deg: {deg_to_hook}")
+	//	show_debug_message($"point down, deg: {deg_to_hook}")
 		sprite_index = spr_point_down;
 
 	}
 	else if (deg_to_hook >= 293 && deg_to_hook < 337){
-		show_debug_message($"point down left, deg: {deg_to_hook}")
+	//f	show_debug_message($"point down left, deg: {deg_to_hook}")
 		sprite_index = spr_point_down_left;
 
 	}
@@ -159,11 +159,42 @@ if(hooked == true) {
 	sprite_index = sprPlayerWalk
 	image_speed = 0;
 }
-if(xVel!=0) {
-image_xscale = sign(xVel);
+if(xVel+rVel-lVel!=0) {
+image_xscale = sign(rVel-lVel);
+}
+if(place_meeting(x+2*dir,y, obj_tile)) { // && (keyboard_check(ord("A")) || keyboard_check(ord("D")))
+if(airtime > 0.8) {
+	airtime = 0.8;
+}
+	onWall = true;
+
+} else {
+	onWall = false;
 }
 
 
+
+lVel = lerp(0,spd,leftTime);
+rVel = lerp(0,spd,rightTime);
+//show_debug_message((rVel-lVel)/4);
+if(walljump == false) {
+	if(grounded == true) {
+		if(!keyboard_check(ord("A"))) {
+	leftTime *= (1-ground_friction);
+}
+if(!keyboard_check(ord("D"))) {
+	rightTime *= (1-ground_friction);
+}
+	} else {
+if(!keyboard_check(ord("A"))) {
+	leftTime *= (1-air_resistance);
+}
+if(!keyboard_check(ord("D"))) {
+	rightTime *= (1-air_resistance);
+}
+}
+}
+//show_debug_message($"lVel: {lVel}, rVel: {rVel}, xVel: {xVel}");
 
 //show_debug_message(onWall);
 //show_debug_message(1/abs(airtime));

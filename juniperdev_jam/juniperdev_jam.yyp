@@ -96,6 +96,7 @@
     {"id":{"name":"spr_portrait18","path":"sprites/spr_portrait18/spr_portrait18.yy",},},
     {"id":{"name":"spr_portrait19","path":"sprites/spr_portrait19/spr_portrait19.yy",},},
     {"id":{"name":"spr_portrait20","path":"sprites/spr_portrait20/spr_portrait20.yy",},},
+    {"id":{"name":"spr_portrait21","path":"sprites/spr_portrait21/spr_portrait21.yy",},},
     {"id":{"name":"spr_roomtransition","path":"sprites/spr_roomtransition/spr_roomtransition.yy",},},
     {"id":{"name":"spr_tile_buildings","path":"sprites/spr_tile_buildings/spr_tile_buildings.yy",},},
     {"id":{"name":"spr_tile_details","path":"sprites/spr_tile_details/spr_tile_details.yy",},},

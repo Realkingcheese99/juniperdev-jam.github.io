@@ -1,4 +1,4 @@
-if(global.interact == 0) {
+fif(global.interact == 0) {
 
 //y velocity calculations
 grav = heaviness*airtime;

@@ -27,7 +27,7 @@
   "origin":0,
   "parent":{
     "name":"spr",
-    "path":"folders/player/spr.yy",
+    "path":"folders/environment/spr.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

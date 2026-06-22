@@ -1,4 +1,4 @@
-
+if(global.interact == 0) {
 if(keyboard_check(ord("A"))) {
 	dir = 1;
 		if(place_meeting(x-1,y-1,obj_tile)) {
@@ -61,7 +61,7 @@ if(hooked == true) {
 	x=nearest_hook.x+nearest_hook.sprite_width/2+sign(dx)*distance*sin(hookAngle)
 	y=nearest_hook.y+nearest_hook.sprite_height/2+distance*cos(hookAngle)
 	show_debug_message(y);
-		hookAngle-=0.15;
+		hookAngle-=swingSpd;
 		hooktime += 0.03
 	}
 	}
@@ -70,7 +70,7 @@ if(hooked == true) {
 	}
 
 
-if((jumping == true) && (jumptime < 10) && (keyboard_check(vk_space) || keyboard_check(ord("W")))) {
+if((jumping == true) && (jumptime < 15 ) && (keyboard_check(vk_space) || keyboard_check(ord("W")))) {
 	jumptime++;
 	airtime = -0.01
 	if(walljump == true) {
@@ -82,6 +82,9 @@ if((jumping == true) && (jumptime < 10) && (keyboard_check(vk_space) || keyboard
 		}
 	}
 }
+
 if(jumptime >= 10) {
-	dir = abs(dir-1) + 1;
+	dir = abs(dir-2) + 1;
+}
+
 }

@@ -108,6 +108,13 @@ else if (currentChar < string_length(dialogPage))
 		}	
 
         _line += _words[w];
+		
+				//sets the length of what's considered "too long"
+		if(portraitString == "0") {
+			lineBreak = boxW-15;
+		} else {
+			lineBreak = boxW-15-4.266*48
+		}
 
 		//if currentline is to long cut to the next line
         if (string_width(_line) > lineBreak)
@@ -163,6 +170,7 @@ else if (keyboard_check_pressed(ord("Z")) or autoPage == true)
 		 //End dialogue if done
 		 if (page >= array_length(dialog))
 		 {
+			global.interact = 0;
 		    instance_destroy();
 		 }
 		 else

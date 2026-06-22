@@ -1,4 +1,4 @@
-
+if(global.interact == 0) {
 
 //y velocity calculations
 grav = heaviness*airtime;
@@ -51,7 +51,7 @@ if(!place_meeting(x,y+2,obj_tile)) {
 	collision = true;
 }
 
-
+}
 
 
 //testing, brings player back to spawn when falling off

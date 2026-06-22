@@ -37,3 +37,4 @@ keystringList =
 	"P"
 ]
 
+global.interact = 1;

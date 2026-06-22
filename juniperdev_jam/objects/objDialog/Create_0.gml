@@ -20,7 +20,6 @@ puncTime = 15;
 autoPage = false;
 lineBreak = boxW - 15;
 breakTrigger = false;
-portraitString = "0";
 
 
 punctuations =

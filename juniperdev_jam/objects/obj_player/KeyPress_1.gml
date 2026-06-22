@@ -23,4 +23,3 @@ if(onWall == true) {
 if(keyboard_check(vk_down)) {
 	airtime = 2;
 }
-

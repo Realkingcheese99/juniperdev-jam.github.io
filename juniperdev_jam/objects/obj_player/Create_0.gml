@@ -1,5 +1,5 @@
 spd = 5;
-initial_jump_vel = 6;
+//initial_jump_vel = 6;
 airtime = global.airtime;
 xVel = global.xVel;
 yVel = 0;
@@ -7,6 +7,7 @@ floatiness = 6;
 heaviness = 5;
 ground_friction = 0.5
 air_resistance = 0.05;
+//gravity
 grav = 0;
 upvel = 0;
 airjumps = 0;
@@ -16,8 +17,6 @@ hooked = false;
 release_modifier = 10;
 distance = 0;
 nearest_hook = 0;
-pass1 = false;
-pass2 = false;
 collision = false;
 hooktime = 0;
 /*

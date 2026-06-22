@@ -1,5 +1,4 @@
 /// @desc Text typing
-
 if (page < 0) exit;
 
 dialogPage = dialog[page];
@@ -13,8 +12,8 @@ else if (currentChar < string_length(dialogPage))
 {
 	var _typeSpd = typeSpd;
 	
-	currentChar += _typeSpd + keyboard_check(ord("X")) * 100;
-
+	currentChar += _typeSpd + (nameString!=""&&keyboard_check(ord("X"))) * 100;
+show_debug_message((nameString!=""&&keyboard_check(ord("X"))))
 	//-------Pause at punctuations-------//
 	
 	var _punc = string_char_at(dialogPage, currentChar);

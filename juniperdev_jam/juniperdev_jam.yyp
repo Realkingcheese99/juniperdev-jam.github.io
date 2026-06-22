@@ -41,6 +41,7 @@
   "name":"juniperdev_jam",
   "resources":[
     {"id":{"name":"fnt_common","path":"fonts/fnt_common/fnt_common.yy",},},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},},
     {"id":{"name":"obj_dialogueInteract","path":"objects/obj_dialogueInteract/obj_dialogueInteract.yy",},},
     {"id":{"name":"obj_dialoguetrigger","path":"objects/obj_dialoguetrigger/obj_dialoguetrigger.yy",},},
@@ -59,6 +60,7 @@
     {"id":{"name":"rmStart_04","path":"rooms/rmStart_04/rmStart_04.yy",},},
     {"id":{"name":"scr_init","path":"scripts/scr_init/scr_init.yy",},},
     {"id":{"name":"scrDialog","path":"scripts/scrDialog/scrDialog.yy",},},
+    {"id":{"name":"spr_camera","path":"sprites/spr_camera/spr_camera.yy",},},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},},
     {"id":{"name":"spr_dialogueInteract","path":"sprites/spr_dialogueInteract/spr_dialogueInteract.yy",},},
     {"id":{"name":"spr_dialoguetrigger","path":"sprites/spr_dialoguetrigger/spr_dialoguetrigger.yy",},},

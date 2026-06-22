@@ -151,10 +151,10 @@ if(hooked == true) {
 	sprite_index = sprPlayerJump;
 
 	image_speed = 0;
-} else if(abs(xVel>0.1)) {
+} else if(abs(xVel+rVel-lVel>0.1)) {
 	sprite_index = sprPlayerWalk
 	image_speed = 1;
-} else if(abs(xVel) <= 0.1) {
+} else if(abs(xVel+rVel-lVel) <= 0.1) {
 	//idle anim
 	sprite_index = sprPlayerWalk
 	image_speed = 0;

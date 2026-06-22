@@ -1,0 +1,1 @@
+parallaxConstant = 0.9

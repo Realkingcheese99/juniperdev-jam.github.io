@@ -39,6 +39,7 @@
   "resources":[
     {"id":{"name":"fnt_common","path":"fonts/fnt_common/fnt_common.yy",},},
     {"id":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},},
+    {"id":{"name":"obj_dialogueInteract","path":"objects/obj_dialogueInteract/obj_dialogueInteract.yy",},},
     {"id":{"name":"obj_hook","path":"objects/obj_hook/obj_hook.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_roomtransition","path":"objects/obj_roomtransition/obj_roomtransition.yy",},},
@@ -53,6 +54,7 @@
     {"id":{"name":"scr_init","path":"scripts/scr_init/scr_init.yy",},},
     {"id":{"name":"scrDialog","path":"scripts/scrDialog/scrDialog.yy",},},
     {"id":{"name":"spr_collision","path":"sprites/spr_collision/spr_collision.yy",},},
+    {"id":{"name":"spr_dialogueInteract","path":"sprites/spr_dialogueInteract/spr_dialogueInteract.yy",},},
     {"id":{"name":"spr_hook","path":"sprites/spr_hook/spr_hook.yy",},},
     {"id":{"name":"spr_player_old","path":"sprites/spr_player_old/spr_player_old.yy",},},
     {"id":{"name":"spr_player_prototype","path":"sprites/spr_player_prototype/spr_player_prototype.yy",},},

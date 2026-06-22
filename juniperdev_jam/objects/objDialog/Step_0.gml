@@ -76,7 +76,20 @@ else if (currentChar < string_length(dialogPage))
 					currentChar++;
 				}
 			}
-	
+				//talk sprites
+			else if (_keystring == "$" && _typeSpd == typeSpd)
+			{
+			//	show_debug_message($"char: {currentChar}");
+				if(currentChar <1) {
+				currentChar += 2;
+				} else {
+					currentChar++;
+				}
+				var _portrait = string_char_at(dialogPage, currentChar);
+				portraitString = $"spr_portrait{_portrait}"
+				show_debug_message(portraitString);
+				currentChar++
+			}
 		
 //-------Set points where the dialogue wraps-------//
     var _words = string_split(dialogPage, " ");

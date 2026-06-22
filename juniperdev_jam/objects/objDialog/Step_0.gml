@@ -85,7 +85,9 @@ else if (currentChar < string_length(dialogPage))
 				} else {
 					currentChar++;
 				}
-				var _portrait = string_char_at(dialogPage, currentChar);
+				var _dig1 = string_char_at(dialogPage, currentChar);
+				var _dig2 = string_char_at(dialogPage, currentChar+1);
+				var _portrait = _dig1 + _dig2;
 				portraitString = $"spr_portrait{_portrait}"
 				show_debug_message(portraitString);
 				currentChar++
@@ -138,11 +140,23 @@ else if (currentChar < string_length(dialogPage))
 	{
 		drawnText = string_replace_all(drawnText,"^" + string(i), "");
 	}
+		//clear $(value)
+	for (var i = 30; i >= 0 ; i--)
+	{
+		if(i<10) {
+			var j = $"0{i}"; 
+		} else {
+			var j = string(i);
+		}
+		drawnText = string_replace_all(drawnText,"$" + j, "");
+	}
 }
+
 
 else if (keyboard_check_pressed(ord("Z")) or autoPage == true)
 	 {
 		 //Advanse dialogue
+		 portraitString = "0";
 		 page++;
 		 autoPage = false;
 		

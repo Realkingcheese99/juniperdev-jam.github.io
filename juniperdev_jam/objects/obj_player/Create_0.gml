@@ -38,3 +38,4 @@ lVel = 0;
 leftTime = 0;
 rightTime = 0;
 acceleration = 0.1
+instance_create_depth(x,y,0,obj_camera);

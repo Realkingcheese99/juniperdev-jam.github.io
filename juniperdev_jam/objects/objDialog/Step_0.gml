@@ -92,6 +92,28 @@ else if (currentChar < string_length(dialogPage))
 				show_debug_message(portraitString);
 				currentChar++
 			}
+			
+			//names
+			else if (_keystring == "_" && _typeSpd == typeSpd)
+			{
+				var _name = "";
+				var _timer = 0;
+			//	show_debug_message($"char: {currentChar}");
+			currentChar++;
+			while(string_char_at(dialogPage, currentChar) != "~") {
+				_name = string_concat(_name, string_char_at(dialogPage, currentChar))
+				currentChar++;
+				_timer++;
+				if(_timer > 100) {
+					exit
+				}
+
+			}
+							currentChar++;
+				
+				show_debug_message(_name);
+				nameString = _name;
+			}
 		
 //-------Set points where the dialogue wraps-------//
     var _words = string_split(dialogPage, " ");
@@ -157,7 +179,10 @@ else if (currentChar < string_length(dialogPage))
 		}
 		drawnText = string_replace_all(drawnText,"$" + j, "");
 	}
+	//clear name(string)
+	drawnText = string_replace_all(drawnText, "_" + nameString +"~", "");
 }
+
 
 
 else if (keyboard_check_pressed(ord("Z")) or autoPage == true)

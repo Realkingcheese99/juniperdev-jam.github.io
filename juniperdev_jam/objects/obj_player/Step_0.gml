@@ -160,7 +160,7 @@ if(hooked == true) {
 	image_speed = 0;
 }
 if(xVel+rVel-lVel!=0) {
-image_xscale = sign(rVel-lVel);
+image_xscale = dir;
 }
 if(place_meeting(x+2*dir,y, obj_tile)) { // && (keyboard_check(ord("A")) || keyboard_check(ord("D")))
 if(airtime > 0.8) {

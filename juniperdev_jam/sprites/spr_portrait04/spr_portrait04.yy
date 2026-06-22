@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"portraits",
-    "path":"folders/Dialogue system/portraits.yy",
+    "name":"watt",
+    "path":"folders/Dialogue system/portraits/watt.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

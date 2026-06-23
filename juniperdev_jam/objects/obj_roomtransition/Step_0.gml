@@ -9,7 +9,7 @@ if(!place_meeting(x,y,obj_player)) {
 	global.playerX = 5;
 	room_goto_next();
 	} else {
-		global.playerX = room_width
+		global.playerX = 315
 		room_goto_previous();
 	}
 }

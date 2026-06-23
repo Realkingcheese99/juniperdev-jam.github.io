@@ -1,4 +1,4 @@
-fif(global.interact == 0) {
+if(global.interact == 0) {
 
 //y velocity calculations
 grav = heaviness*airtime;
@@ -160,9 +160,15 @@ if(hooked == true) {
 	image_speed = 0;
 }
 if(xVel+rVel-lVel!=0) {
-image_xscale = dir;
+	if(dir == DIRECTION.RIGHT) {
+		image_xscale = 1;
+	} else {
+		image_xscale = -1;
+	}
+
 }
-if(place_meeting(x+2*dir,y, obj_tile)) { // && (keyboard_check(ord("A")) || keyboard_check(ord("D")))
+if(dir == DIRECTION.RIGHT) {
+if(place_meeting(x+2,y,obj_tile)) { // && (keyboard_check(ord("A")) || keyboard_check(ord("D")))
 if(airtime > 0.8) {
 	airtime = 0.8;
 }
@@ -171,7 +177,17 @@ if(airtime > 0.8) {
 } else {
 	onWall = false;
 }
+} else {
+	if(place_meeting(x-2,y,obj_tile)) { // && (keyboard_check(ord("A")) || keyboard_check(ord("D")))
+if(airtime > 0.8) {
+	airtime = 0.8;
+}
+	onWall = true;
 
+} else {
+	onWall = false;
+}
+}
 
 
 lVel = lerp(0,spd,leftTime);
@@ -193,6 +209,10 @@ if(!keyboard_check(ord("D"))) {
 	rightTime *= (1-air_resistance);
 }
 }
+}
+
+if(room==rmStart_03) {
+	show_debug_message($"x: {x}, y: {y}");
 }
 //show_debug_message($"lVel: {lVel}, rVel: {rVel}, xVel: {xVel}");
 

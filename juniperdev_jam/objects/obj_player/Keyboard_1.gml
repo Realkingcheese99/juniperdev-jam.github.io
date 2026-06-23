@@ -1,38 +1,22 @@
-
+if(global.interact == 0) {
 if(keyboard_check(ord("A"))) {
-	dir = DIRECTION.RIGHT;
-		if(place_meeting(x-1,y-1,obj_tile)) {
-		onWall = true
-		airtime = 0.8
-	} else {
-		onWall = false;
+	dir = DIRECTION.LEFT;
+	if(leftTime+acceleration <= 1) {
+	leftTime += acceleration;
 	}
 	if(abs(xVel)<=spd) {
-	xVel = -spd;
-	} else if(grounded == false) {
-		if(sign(xVel == 1)) {
-			xVel -= 2*spd*air_resistance;
+//	xVel = -spd;
 	}
 
-	}
 } else if(keyboard_check(ord("D"))) { 
-	dir = DIRECTION.LEFT;
-	if(place_meeting(x+1,y-1,obj_tile)) {
-		onWall = true;
-		airtime = 0.8;
-	} else {
-		onWall = false;
+	dir = DIRECTION.RIGHT;
+		if(rightTime+acceleration <= 1) {
+	rightTime += acceleration;
 	}
 	if(abs(xVel)<=spd) {
-	xVel = spd;
-	} else if(grounded == false) {
-		if(sign(xVel == -1)) {
-			xVel += 2*spd*air_resistance;
+//	xVel = spd;
 	}
-	
-		
-	}
-	}
+}
 	if(instance_exists(obj_hook)){
 if(keyboard_check_pressed(ord("F"))) {
 	hooktime = 0;
@@ -70,18 +54,23 @@ if(hooked == true) {
 	}
 
 
-if((jumping == true) && (jumptime < 10) && (keyboard_check(vk_space) || keyboard_check(ord("W")))) {
+if((jumping == true) && (jumptime < 15) && (keyboard_check(vk_space) || keyboard_check(ord("W")))) {
 	jumptime++;
 	airtime = -0.01
 	if(walljump == true) {
 		airtime = -0.02;
-		if(dir == DIRECTION.RIGHT) {
-			xVel = spd;
-		} else if(dir == DIRECTION.LEFT) {
-			xVel = -spd;
+		if(dir == DIRECTION.LEFT) {
+			rightTime = 0.8;
+			leftTime = 0;
+			
+		} else {
+			leftTime = 0.8;
+			rightTime = 0;
 		}
+	alarm[0] = 5;
 	}
 }
 if(jumptime >= 10) {
 	dir = abs(dir-1) + 1;
+}
 }

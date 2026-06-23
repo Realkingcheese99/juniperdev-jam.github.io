@@ -8,10 +8,12 @@ if(((grounded == true) || (airjumps > 0) || (onWall == true)) && (keyboard_check
 	grounded = false;
 	if(onWall == true) {
 		walljump = true;
-		if(dir == DIRECTION.RIGHT) {
-			xVel = spd;
-		} else if(dir == DIRECTION.LEFT) {
-			xVel = -spd;
+		if(dir == DIRECTION.LEFT) {
+			
+			leftTime = 0;
+		} else {
+			
+			rightTime = 0;
 		}
 	}
 

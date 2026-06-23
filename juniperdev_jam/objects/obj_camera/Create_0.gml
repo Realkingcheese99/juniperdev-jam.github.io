@@ -1,1 +1,2 @@
-parallaxConstant = 0.9
+yOffset = 15;
+xOffset = 15;

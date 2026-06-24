@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"tv char",
-    "path":"folders/Dialogue system/portraits/tv char.yy",
+    "name":"cassey",
+    "path":"folders/Dialogue system/portraits/cassey.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

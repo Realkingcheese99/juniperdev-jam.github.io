@@ -28,8 +28,7 @@ if(keyboard_check_pressed(ord("F"))) {
 	if(distance < 50/4) {
 		distance = 50/4;
 	}
-	hookAngle = arccos((dy/distance));
-	release_modifier = distance/5000+0.03;
+	hookAngle = arccos((dy/distance))+2*pi;
 	//show_debug_message(string_concat(y, "; ", nearest_hook.y+nearest_hook.sprite_height/2-distance*sin(hookAngle)-sprite_height/2))
 
 }

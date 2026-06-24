@@ -1,6 +1,7 @@
 //initial player spawning
 global.playerX = 30;
-global.playerY = 126;
+global.playerY = 40;
+//global.playerY = 126;
 global.airtime = 1;
 global.xVel = 0;
 //dialogue from file

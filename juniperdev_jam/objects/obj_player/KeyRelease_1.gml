@@ -8,7 +8,10 @@ if(keyboard_check_released(ord("F"))) {
 	if(hooked == true) {
 	if(distance <= 200) {
 	hooked = false;
-	airtime = ((distance)*sin(hookAngle) + floatiness)/(heaviness+floatiness)*release_modifier;
+	airtime = -(floatiness + distance*cos(hookAngle))/(heaviness+floatiness);
+	airtime *= release_modifier;
+	show_debug_message($"airtime: {airtime}, yVel:  {heaviness*airtime-floatiness*(1-airtime)}");
+	//airtime = (cos(hookAngle) + floatiness)/(heaviness+floatiness)*release_modifier;
 	//show_debug_message(hooktime);
 	xVel = sign(x-nearest_hook.x)*(distance)*cos(hookAngle)*release_modifier*10;
 	show_debug_message(cos(hookAngle)*distance);

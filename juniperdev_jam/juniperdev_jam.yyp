@@ -62,6 +62,7 @@
     {"id":{"name":"rmStart_02","path":"rooms/rmStart_02/rmStart_02.yy",},},
     {"id":{"name":"rmStart_03","path":"rooms/rmStart_03/rmStart_03.yy",},},
     {"id":{"name":"rmStart_04","path":"rooms/rmStart_04/rmStart_04.yy",},},
+    {"id":{"name":"rmStart_05","path":"rooms/rmStart_05/rmStart_05.yy",},},
     {"id":{"name":"scr_init","path":"scripts/scr_init/scr_init.yy",},},
     {"id":{"name":"scrDialog","path":"scripts/scrDialog/scrDialog.yy",},},
     {"id":{"name":"spr_camera","path":"sprites/spr_camera/spr_camera.yy",},},
@@ -122,6 +123,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rmStart_05","path":"rooms/rmStart_05/rmStart_05.yy",},},
     {"roomId":{"name":"rmStart_01","path":"rooms/rmStart_01/rmStart_01.yy",},},
     {"roomId":{"name":"rmStart_02","path":"rooms/rmStart_02/rmStart_02.yy",},},
     {"roomId":{"name":"rmStart_03","path":"rooms/rmStart_03/rmStart_03.yy",},},

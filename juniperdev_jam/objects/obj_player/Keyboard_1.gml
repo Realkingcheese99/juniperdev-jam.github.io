@@ -1,5 +1,5 @@
 if(global.interact == 0) {
-if(keyboard_check(ord("A"))) {
+if(keyboard_check(vk_left)) {
 	dir = DIRECTION.LEFT;
 	if(leftTime+acceleration <= 1) {
 	leftTime += acceleration;
@@ -8,7 +8,7 @@ if(keyboard_check(ord("A"))) {
 //	xVel = -spd;
 	}
 
-} else if(keyboard_check(ord("D"))) { 
+} else if(keyboard_check(vk_right)) { 
 	dir = DIRECTION.RIGHT;
 		if(rightTime+acceleration <= 1) {
 	rightTime += acceleration;
@@ -18,7 +18,7 @@ if(keyboard_check(ord("A"))) {
 	}
 }
 	if(instance_exists(obj_hook)){
-if(keyboard_check_pressed(ord("F"))) {
+if(keyboard_check_pressed(ord("Z"))) {
 	hooktime = 0;
 	collision = false;
 	nearest_hook = instance_nearest(x,y,obj_hook);
@@ -33,7 +33,7 @@ if(keyboard_check_pressed(ord("F"))) {
 
 }
 
-if(keyboard_check(ord("F"))) {
+if(keyboard_check(ord("Z"))) {
 	if(distance <=200/4) {
 		
 if(collision == false) {
@@ -53,7 +53,7 @@ if(hooked == true) {
 	}
 
 
-if((jumping == true) && (jumptime < 15) && (keyboard_check(vk_space) || keyboard_check(ord("W")))) {
+if((jumping == true) && (jumptime < 15) && (keyboard_check(vk_space) || keyboard_check(ord("X")))) {
 	jumptime++;
 	airtime = -0.01
 	if(walljump == true) {

@@ -22,7 +22,7 @@ draw_rectangle(boxX+(4/5)*boxW,boxY-(1/5)*boxH,boxX+boxW,boxY-1,true);
 if(portraitString = "0") {
 draw_text_transformed(boxX + 15, boxY + 5, drawnText,0.3,0.3,0);
 } else {
-	draw_text(boxX + 15+256, boxY + 5, drawnText);
-	draw_sprite_ext(asset_get_index(portraitString),0,boxX+10,boxY+16,4.266,4.266,0,c_white,1);
+	draw_text_transformed(boxX + 15+220, boxY + 5, drawnText,0.3,0.3,0);
+	draw_sprite_ext(asset_get_index(portraitString),0,boxX+10,boxY,4.266,4.266,0,c_white,1);
 }
 draw_text_transformed(boxX+(4/5)*boxW,boxY-(1/5)*boxH, nameString,0.3,0.3,0);

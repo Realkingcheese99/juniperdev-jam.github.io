@@ -195,17 +195,17 @@ rVel = lerp(0,spd,rightTime);
 //show_debug_message((rVel-lVel)/4);
 if(walljump == false) {
 	if(grounded == true) {
-		if(!keyboard_check(ord("A"))) {
+		if(!keyboard_check(vk_left)) {
 	leftTime *= (1-ground_friction);
 }
-if(!keyboard_check(ord("D"))) {
+if(!keyboard_check(vk_right)) {
 	rightTime *= (1-ground_friction);
 }
 	} else {
-if(!keyboard_check(ord("A"))) {
+if(!keyboard_check(vk_left)) {
 	leftTime *= (1-air_resistance);
 }
-if(!keyboard_check(ord("D"))) {
+if(!keyboard_check(vk_right)) {
 	rightTime *= (1-air_resistance);
 }
 }

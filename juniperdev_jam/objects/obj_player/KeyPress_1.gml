@@ -1,4 +1,4 @@
-if(((grounded == true) || (airjumps > 0) || (onWall == true)) && (keyboard_check(vk_space) || keyboard_check(ord("W")))) {
+if(((grounded == true) || (airjumps > 0) || (onWall == true)) && (keyboard_check(vk_space) || keyboard_check(ord("X")))) {
 	jumping = true;
 	jumptime = 0;
 	//airtime = -0.05
@@ -28,6 +28,3 @@ if(onWall == true) {
 }
 }
 
-if(keyboard_check(vk_down)) {
-	room_goto(rmIntroCutscene)
-}

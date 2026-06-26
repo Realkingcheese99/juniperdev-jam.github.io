@@ -3,7 +3,7 @@ if(keyboard_check_released(vk_space)) {
 	walljump = false;
 }
 
-if(keyboard_check_released(ord("F"))) {
+if(keyboard_check_released(ord("Z"))) {
 	if(collision == false) {
 	if(hooked == true) {
 	if(distance <= 200) {

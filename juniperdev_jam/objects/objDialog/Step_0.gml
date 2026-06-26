@@ -132,9 +132,9 @@ show_debug_message((nameString!=""&&keyboard_check(ord("X"))))
 		
 				//sets the length of what's considered "too long"
 		if(portraitString == "0") {
-			lineBreak = boxW-15;
+			lineBreak = 3*boxW-15;
 		} else {
-			lineBreak = boxW-15-(4.266*64)
+			lineBreak = 2.5*boxW-15
 		}
 
 		//if currentline is to long cut to the next line

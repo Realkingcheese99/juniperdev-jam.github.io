@@ -18,3 +18,4 @@ buffer_delete(buffer);
 global.dialogue = json_parse(jsonDialogue);
 }
 global.interact = 0;
+audio_play_sound(mus_background,30,true);

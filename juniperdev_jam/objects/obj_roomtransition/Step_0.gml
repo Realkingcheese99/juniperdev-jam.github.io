@@ -1,7 +1,7 @@
 if(!place_meeting(x,y,obj_player)) {
 	touching = false;
 } else if(touching == false) {
-	show_debug_message(room);
+	//show_debug_message(room);
 	global.playerY = obj_player.y;
 	global.airtime = obj_player.airtime;
 	global.xVel = obj_player.xVel;

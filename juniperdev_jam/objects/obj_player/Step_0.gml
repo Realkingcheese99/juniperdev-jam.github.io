@@ -30,7 +30,7 @@ if((place_meeting(x,y+2,obj_tile) && ceiling == false) || grounded == false) {
 }
 //horizontal
 for(i = 0; i<abs(rVel-lVel); i++) {
-if(!place_meeting(x+2*sign(xVel+(rVel-lVel)),y-1,obj_tile)) {
+if(!place_meeting(x+3*sign(xVel+(rVel-lVel)),y-1,obj_tile)) {
 	x+=(((xVel)+(rVel-lVel))/16);
 } else {
 	hooked = false;
@@ -168,7 +168,7 @@ if(xVel+rVel-lVel!=0) {
 
 }
 if(dir == DIRECTION.RIGHT) {
-if(place_meeting(x+2,y,obj_tile)) { // && (keyboard_check(ord("A")) || keyboard_check(ord("D")))
+if(place_meeting(x+3,y,obj_tile)) { // && (keyboard_check(ord("A")) || keyboard_check(ord("D")))
 if(airtime > 0.8) {
 	airtime = 0.8;
 }
@@ -178,7 +178,7 @@ if(airtime > 0.8) {
 	onWall = false;
 }
 } else {
-	if(place_meeting(x-2,y,obj_tile)) { // && (keyboard_check(ord("A")) || keyboard_check(ord("D")))
+	if(place_meeting(x-3,y,obj_tile)) { // && (keyboard_check(ord("A")) || keyboard_check(ord("D")))
 if(airtime > 0.8) {
 	airtime = 0.8;
 }
@@ -210,13 +210,15 @@ if(!keyboard_check(ord("D"))) {
 }
 }
 }
-
+/*
 if(room==rmStart_03) {
 	show_debug_message($"x: {x}, y: {y}");
 }
-//show_debug_message($"lVel: {lVel}, rVel: {rVel}, xVel: {xVel}");
 
-//show_debug_message(onWall);
-//show_debug_message(1/abs(airtime));
-//show_debug_message(airtime);
-//show_debug_message($"xvel: {xVel}, yvel: {yVel}");
+show_debug_message($"lVel: {lVel}, rVel: {rVel}, xVel: {xVel}");
+
+show_debug_message(onWall);
+show_debug_message(1/abs(airtime));
+show_debug_message(airtime);
+show_debug_message($"xvel: {xVel}, yvel: {yVel}");
+/*

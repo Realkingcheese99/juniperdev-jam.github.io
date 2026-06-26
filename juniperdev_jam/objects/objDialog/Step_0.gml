@@ -134,7 +134,7 @@ show_debug_message((nameString!=""&&keyboard_check(ord("X"))))
 		if(portraitString == "0") {
 			lineBreak = boxW-15;
 		} else {
-			lineBreak = boxW-15-4.266*48
+			lineBreak = boxW-15-(4.266*64)
 		}
 
 		//if currentline is to long cut to the next line

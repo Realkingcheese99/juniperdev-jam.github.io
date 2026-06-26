@@ -8,9 +8,9 @@ draw_text_transformed(250,250,"and our first jam in general.",0.5,0.5,0);
 draw_text_transformed(0,300,"Credits",0.65,0.65,0);
 draw_text_transformed(0,400,"Kingcheese99 - Art, Programming, Ideas",0.3,0.3,0);
 draw_text_transformed(0,450,"Neon - Art, Programming, Ideas, Dialogue",0.3,0.3,0);
-draw_text_transformed(0,500,"J4fur - Art, Programming, Ideas",0.3,0.3,0);
+draw_text_transformed(0,500,"J4yfur - Art, Programming, Ideas",0.3,0.3,0);
 draw_text_transformed(0,550,"Infected - Concept Art",0.3,0.3,0);
-draw_text_transformed(0,600,"Music: Fruiger Aero by Prod. Inuyasha",0.3,0.3,0);
+draw_text_transformed(0,600,"Music: Frutiger Aero by Prod. Inuyasha",0.3,0.3,0);
 
 
 
